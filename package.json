@@ -10,7 +10,7 @@
     "react-scripts": "2.1.5",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0",
-    "txproxy": "^1.0.1"
+    "txproxy": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Input, Container, Image, Segment, Grid, Divider, Header, TextArea, Dropdown, Form, Radio, Tab, Menu } from 'semantic-ui-react';
-import { API } from 'aws-amplify';
+
 import './App.css';
 import Amplify from 'aws-amplify';
 import awsmobile from './aws-exports';
@@ -20,6 +20,10 @@ class App extends Component {
   state = this.INITIAL_STATE;
 
 
+
+  handleNetworkChange = (event, { name }) => this.setState({ network: name })
+  handleBlockChainChainge = (event, { value }) => this.setState({ blockchain: value })
+
   handleTxInput = e => {
     this.setState({
       tx: e.target.value
@@ -33,23 +37,16 @@ class App extends Component {
   }
 
   getTx = async () => {
-    const response = await API.get('txapi', '/tx/' + this.state.txhash);
-    console.log(JSON.stringify(response, null, 2));
+    console.log(this.state.blockchain)
+    const result = await TxProxy.getTx(this.state.txhash, this.state.blockchain, this.state.network);
+    console.log(result)
   }
 
   broadcastTx = async () => {
-    const body = {
-      tx: this.state.tx
-    };
 
-    let init = {
-      body: body
-    }
-    const response = await API.post('txapi', '/tx', init);
-    console.log(JSON.stringify(response, null, 2));
   }
 
-  handleNetworkChange = (e, { name }) => this.setState({ network: name })
+
 
   blockchains = [
     {
@@ -93,7 +90,7 @@ class App extends Component {
           <Grid divided='vertically' className="network">
             <Grid.Row columns={2}>
               <Grid.Column>
-                <Dropdown placeholder='Select Blockchain' fluid clearable selection options={this.blockchains} />
+                <Dropdown placeholder='Select Blockchain' fluid clearable selection options={this.blockchains} onChange={this.handleBlockChainChainge} />
               </Grid.Column>
               <Grid.Column>
                 <Menu secondary>

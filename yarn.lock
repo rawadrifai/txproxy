@@ -10364,10 +10364,10 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
-txproxy@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/txproxy/-/txproxy-1.0.1.tgz#9e0514ea4170ee56fda42502b1027fe8ae0de22c"
-  integrity sha512-t577iug9CP5BiYNAKrLc5g6qQ2JY5OPocVudUPhh7B+8rtf25sM+h/FihOa5XbNbVC1aqSoW10pr9qlIGD06LQ==
+txproxy@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/txproxy/-/txproxy-1.0.5.tgz#8518f936481c49150902a693da4d9eee05d127c7"
+  integrity sha512-J29A3NCNtyFPTlx9yuW7uhciDV8XJjdn6bRXoJa9mJG/xIWV9z5sgtrKdSRIP2SIWJL32umb2qaLKmXq7hnB/Q==
   dependencies:
     axios "^0.18.0"
     babel-runtime "^6.26.0"
