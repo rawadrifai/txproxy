@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "txproxy-20190220222914-authRole",
+            "UnauthRoleArn": "arn:aws:iam::878435980219:role/txproxy-20190220222914-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::878435980219:role/txproxy-20190220222914-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "txproxy-20190220222914-deployment",
+            "UnauthRoleName": "txproxy-20190220222914-unauthRole",
+            "StackName": "txproxy-20190220222914",
+            "StackId": "arn:aws:cloudformation:us-west-2:878435980219:stack/txproxy-20190220222914/02524170-35a2-11e9-840a-02b3ac628dcc"
+        }
+    }
+}
